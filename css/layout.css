@@ -1,0 +1,30 @@
+.navbar {
+  z-index: 1000;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 56px; /* altura do header */
+  left: 0;
+  bottom: 0;
+  background-color: #343a40;
+  color: white;
+  padding-top: 1rem;
+}
+
+.sidebar a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #495057;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 1rem;
+  padding-top: 80px;
+}

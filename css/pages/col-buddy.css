@@ -1,0 +1,81 @@
+body {
+      background-color: #f8f9fa;
+    }
+
+    .sidebar {
+      width: 250px;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      bottom: 0;
+      background-color: #343a40;
+      color: white;
+      padding-top: 1rem;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #495057;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 1rem;
+      padding-top: 80px;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .progress-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#0d6efd 70%, #e9ecef 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0d6efd;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .course-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: white;
+      margin-bottom: 1rem;
+    }
+
+    .course-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .course-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background-color: #ffc107;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-right: 15px;
+    }

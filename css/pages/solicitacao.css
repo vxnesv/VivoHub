@@ -1,0 +1,90 @@
+body {
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #343a40;
+      padding-top: 1rem;
+      transition: width 0.3s;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .sidebar.collapsed {
+      width: 60px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .sidebar a:hover {
+      background-color: #495057;
+    }
+
+    .main-content {
+      margin-left: 220px;
+      padding: 1rem;
+      transition: margin-left 0.3s;
+    }
+
+    .sidebar.collapsed ~ .main-content {
+      margin-left: 60px;
+    }
+
+    .kanban-board {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .kanban-column {
+      flex: 1;
+      background-color: #ffffff;
+      border-radius: 6px;
+      padding: 0.5rem;
+      min-height: 500px;
+      border: 1px solid #dee2e6;
+    }
+
+    .kanban-column h5 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .ticket-card {
+      background-color: #e9ecef;
+      border-radius: 5px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+      cursor: grab;
+    }
+
+    .ticket-card:hover {
+      background-color: #dee2e6;
+    }
+
+    .navbar {
+      z-index: 1050;
+    }
+
+    .profile-info {
+      color: #fff;
+    }
+
+    .sidebar-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+    }
