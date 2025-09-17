@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard do Buddy</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/pages/buddy.css"/>
+
+</head>
+<body>
+
+    <nav class="navbar custom-navbar">
+      <div class="container-fluid">
+        <button class="btn btn-outline-light me-2" id="toggleSidebar">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="d-flex align-items-center ms-auto text-white">
+          <i class="bi bi-person-circle me-2"></i>
+          <span id="userEmail">ajulia@vivo.com</span>
+        </div>
+      </div>
+  </nav>
+
+  <div class="sidebar">
+    <a href="dashboard.html"><i class="bi bi-house-door-fill me-2"></i> Dashboard</a>
+    <a href="perfil.html"><i class="bi bi-person-fill me-2"></i> Perfil</a>
+    <a href="#"><i class="bi bi-people-fill me-2"></i> Meus Novatos</a>
+    <a href="#"><i class="bi bi-trophy-fill me-2"></i> Conquistas</a>
+    <a href="email.html"><i class="bi bi-inbox-fill me-2"></i> E-mail</a>
+    <a href="mensageria.html"><i class="bi bi-chat-dots-fill me-2"></i> Mensagens</a>
+    <a href="#"><i class="bi bi-box-arrow-right me-2"></i> Sair</a>
+  </div>
+
+  <main class="content">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-bg-warning">
+          <div class="card-body">
+            <h5>Conquistas</h5>
+            <div class="d-flex align-items-center flex-wrap">
+              <span class="badge bg-primary me-2 mb-2"><i class="bi bi-star-fill badge-icon"></i> Mentor de Ouro</span>
+              <span class="badge bg-success me-2 mb-2"><i class="bi bi-lightbulb-fill badge-icon"></i> Guia Inspirador</span>
+              <span class="badge bg-info text-dark me-2 mb-2"><i class="bi bi-people-fill badge-icon"></i> 5 Novatos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <div class="card text-bg-info">
+          <div class="card-body">
+            <h5>Ranking dos Buddys</h5>
+            <ol class="mt-3 mb-0">
+              <li>Joana - 120 pts</li>
+              <li><strong>Você</strong> - 100 pts</li>
+              <li>Rodrigo - 90 pts</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h5>Novos Colaboradores Assistidos</h5>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Nome</th>
+                <th>Último Acesso</th>
+                <th>Progresso</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="d-flex align-items-center">
+                  <img src="https://i.pravatar.cc/100?img=8" class="profile-img" alt="Foto">
+                  <div><strong>Camila Rocha</strong></div>
+                </td>
+                <td>Hoje</td>
+                <td style="width: 30%;">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 60%">60%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary me-2" onclick="abrirEmail('camila@empresa.com')">
+                    <i class="bi bi-envelope"></i>
+                  </button>
+                  <a href="mensageria.html" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-chat-dots"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="d-flex align-items-center">
+                  <img src="https://i.pravatar.cc/100?img=11" class="profile-img" alt="Foto">
+                  <div><strong>Felipe Alves</strong></div>
+                </td>
+                <td>10 dias</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 30%">30%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary me-2" onclick="abrirEmail('felipe@empresa.com')">
+                    <i class="bi bi-envelope"></i>
+                  </button>
+                  <a href="mensageria.html" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-chat-dots"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalEmail" tabindex="-1" aria-labelledby="modalEmailLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEmailLabel">Novo E-mail</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>De:</label>
+            <input type="email" class="form-control" value="buddy@empresa.com" disabled>
+          </div>
+          <div class="mb-3">
+            <label>Para:</label>
+            <input type="email" id="emailPara" class="form-control" readonly>
+          </div>
+          <div class="mb-3">
+            <label>Assunto:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Mensagem:</label>
+            <textarea class="form-control" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/global.js"></script>
+  <script src="js/pages/dash-buddy.js" ></script>
+    
