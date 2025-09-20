@@ -26,6 +26,23 @@
         </div>
       </div>
   </nav>
+  <div class="d-flex align-items-center gap-3"></div>
+  <div class="dropdown">
+        <button class="btn btn-dark position-relative" type="button" id="notificacoesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-bell" style="font-size: 1.5rem;"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+            <span class="visually-hidden">notificações não lidas</span>
+          </span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end p-2" aria-labelledby="notificacoesDropdown" style="min-width: 300px;">
+          <li><strong>Notificações</strong></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Nova mensagem de João</a></li>
+          <li><a class="dropdown-item" href="#">Curso "Integração" atualizado</a></li>
+          <li><a class="dropdown-item" href="#">Você ganhou um badge!</a></li>
+        </ul>
+      </div>
 
   <div class="sidebar">
    <a href="dashboard.html"><i class="bi bi-house-door-fill me-2"></i> Dashboard</a>
