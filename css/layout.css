@@ -1,0 +1,36 @@
+.navbar {
+  z-index: 1000;
+}
+
+.custom-navbar {
+    background-color: #2a022d;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 56px; 
+  left: 0;
+  height: calc(100% - 56px);
+  bottom: 0;
+  background-color: #820a8a;
+  color: white;
+  padding-top: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #820a8a;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 1rem;
+  padding-top: 80px;
+}
